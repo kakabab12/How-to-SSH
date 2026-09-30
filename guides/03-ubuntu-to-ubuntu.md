@@ -3,6 +3,8 @@
 > **내 컴퓨터(노트북, 집 PC)가 Ubuntu**이고, **원격 컴퓨터(연구실 PC)도 Ubuntu**인 경우입니다.
 > 이 파일 하나만 위에서부터 순서대로 따라 하면 **SSH**와 **바탕화면 원격 접속**이 모두 설정됩니다.
 
+> 🐣 **컴퓨터가 익숙하지 않다면** 이 문서 대신 **[쉬운 가이드](../easy/03-ubuntu-to-ubuntu.md)** 를 먼저 따라 하세요. 이 문서는 여러 방법을 비교하는 자세한 버전입니다.
+
 [← 전체 목차로 돌아가기](../README.md)
 
 ---
@@ -49,6 +51,7 @@
 ### 1-1. 두 컴퓨터 모두 (🐧 원격 Ubuntu, 💻 내 Ubuntu)
 
 ```bash
+sudo apt install -y curl                           # curl 이 없으면 설치 (새로 설치한 우분투에는 없음)
 curl -fsSL https://tailscale.com/install.sh | sh   # 설치
 sudo tailscale up                                  # 출력되는 URL을 브라우저로 열어 "같은 계정"으로 로그인
 tailscale status                                   # 연결된 기기 목록

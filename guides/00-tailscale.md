@@ -54,6 +54,7 @@
 ## 4. 🐧 Ubuntu에 설치
 
 ```bash
+sudo apt install -y curl                           # curl 이 없으면 설치 (새로 설치한 우분투에는 없음)
 curl -fsSL https://tailscale.com/install.sh | sh   # 설치
 sudo tailscale up                                  # 로그인 (출력되는 URL을 브라우저로 열어서 로그인)
 tailscale ip -4                                    # 내 Tailscale IP 확인 (100.x.x.x)

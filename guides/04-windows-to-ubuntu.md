@@ -4,6 +4,8 @@
 > 연구실 서버(Ubuntu)와 개인 PC(Windows)를 쓰는 **가장 흔한 조합**입니다.
 > 이 파일 하나만 위에서부터 순서대로 따라 하면 **SSH**와 **바탕화면 원격 접속**이 모두 설정됩니다.
 
+> 🐣 **컴퓨터가 익숙하지 않다면** 이 문서 대신 **[쉬운 가이드](../easy/04-windows-to-ubuntu.md)** 를 먼저 따라 하세요. 이 문서는 여러 방법을 비교하는 자세한 버전입니다.
+
 [← 전체 목차로 돌아가기](../README.md)
 
 ---
@@ -49,6 +51,7 @@
 ### 1-1. 🐧 원격 Ubuntu (연구실 PC)
 
 ```bash
+sudo apt install -y curl                           # curl 이 없으면 설치 (새로 설치한 우분투에는 없음)
 curl -fsSL https://tailscale.com/install.sh | sh   # 설치
 sudo tailscale up                                  # 출력되는 URL을 브라우저로 열어 로그인
 tailscale ip -4                                    # 100.x.x.x → 메모
