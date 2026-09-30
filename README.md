@@ -8,8 +8,33 @@
 
 ---
 
+<a id="claude-code"></a>
+## 🤖 Claude Code로 설정하기 (가장 쉬운 방법)
+
+설정할 컴퓨터에서 **Claude Code**를 열고, 아래 문장을 **그대로 복사해서 붙여넣으세요.**
+
+```
+https://github.com/kakabab12/How-to-SSH 저장소를 받아서 AGENTS.md 지침대로 이 컴퓨터의 원격 접속 설정을 처음부터 끝까지 도와줘.
+```
+
+Claude가 "이 컴퓨터가 연구실 PC인가요, 노트북인가요?"처럼 물어보면 답하고, 시키는 대로 따라 하면 돼요.
+
+| 알아두세요 | |
+|---|---|
+| 🏫 → 💻 **순서** | **연구실 PC에서 먼저** 하고, 끝나면 **노트북에서도** 같은 문장을 붙여넣어요. |
+| 🔑 **비밀번호** | 구글 로그인과 비밀번호는 **직접** 입력해요. Claude에게 알려주지 않아도 돼요. |
+| 🛡️ **관리자 권한** | Claude가 **터미널에 붙여넣을 명령**을 주거나, **"예"를 눌러야 하는 창**을 띄워요. |
+| 🔄 **재부팅한 뒤** | Claude Code를 다시 열고 **"How-to-SSH 이어서 해줘"** 라고 말하면 이어서 진행해요. |
+| 🧰 **준비물** | 설정할 컴퓨터에 Claude Code가 설치되어 있어야 해요. → [claude.com/claude-code](https://claude.com/claude-code) |
+
+> 🤖 **AI 에이전트에게**: 작업을 시작하기 전에 [AGENTS.md](AGENTS.md)를 읽으세요.
+> (raw: `https://raw.githubusercontent.com/kakabab12/How-to-SSH/main/AGENTS.md`)
+> 상태 점검: `bash scripts/check-ubuntu.sh` / `powershell -NoProfile -ExecutionPolicy Bypass -File scripts\check-windows.ps1`
+
+---
+
 <a id="easy"></a>
-## 🐣 컴퓨터를 잘 모른다면 → 쉬운 가이드부터!
+## 🐣 직접 따라 하고 싶다면 → 쉬운 가이드
 
 > 터미널이 뭔지 몰라도 괜찮아요. **클릭 순서와 복사해서 붙여넣을 명령어**만 따라 하면 돼요.
 > 선택지 없이 **한 가지 방법(Tailscale + SSH + RustDesk)** 만 알려 드려요. 끝나면 **연구실 바탕화면을 그대로** 볼 수 있어요.
@@ -81,6 +106,15 @@
 | [03-ubuntu-to-ubuntu.md](easy/03-ubuntu-to-ubuntu.md) | 🐧 우분투 → 🐧 우분투 |
 | [04-windows-to-ubuntu.md](easy/04-windows-to-ubuntu.md) | 🪟 윈도우 → 🐧 우분투 |
 | [glossary.md](easy/glossary.md) | 📖 용어 사전 |
+| [lab-checklist.md](easy/lab-checklist.md) | 🏫 연구실 체크리스트 (첫날 할 일, 매일 떠날 때, 접속 안 될 때 확인 순서) |
+
+### 🤖 AI 에이전트용
+| 파일 | 내용 |
+|---|---|
+| [AGENTS.md](AGENTS.md) | Claude Code 등 AI 에이전트가 따르는 설정 절차 |
+| [CLAUDE.md](CLAUDE.md) | Claude Code가 저장소를 열면 자동으로 읽는 파일 (AGENTS.md를 불러옴) |
+| [scripts/check-ubuntu.sh](scripts/check-ubuntu.sh) | 우분투 상태 점검 (읽기 전용, 아무것도 바꾸지 않음) |
+| [scripts/check-windows.ps1](scripts/check-windows.ps1) | 윈도우 상태 점검 (읽기 전용, 아무것도 바꾸지 않음) |
 
 ### 📘 자세한 경우별 가이드 (`guides/`)
 | 파일 | 내용 |
